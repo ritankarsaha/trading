@@ -1,0 +1,13 @@
+[project]
+name = "tc-research"
+version = "0.1.0"
+description = "Research plane for trading-ultra: calibration, signal adapters, event interchange with the Rust engine"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.2", "pyarrow>=15"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

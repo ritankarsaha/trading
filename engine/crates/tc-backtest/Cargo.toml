@@ -1,0 +1,13 @@
+[package]
+name = "tc-backtest"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+tc-core.workspace = true
+tc-ledger.workspace = true
+tc-sim.workspace = true
+tc-risk.workspace = true
+tc-strategy.workspace = true

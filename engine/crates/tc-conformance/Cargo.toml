@@ -1,0 +1,10 @@
+[package]
+name = "tc-conformance"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+tc-core.workspace = true
+
+[dev-dependencies]
+tc-sim.workspace = true

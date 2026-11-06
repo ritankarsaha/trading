@@ -1,0 +1,11 @@
+# build + env + data
+engine/target/
+venues/*/target/
+.env
+*.env
+HALT
+ledger/
+research/.venv/
+__pycache__/
+*.pyc
+data/

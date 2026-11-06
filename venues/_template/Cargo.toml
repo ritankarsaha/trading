@@ -1,0 +1,14 @@
+# Copy this folder to venues/<name>/ and rename the package. Each venue is its OWN cargo workspace that depends
+# on the shared engine crates by path, so a venue can be built, tested and deployed independently.
+[package]
+name = "venue-template"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+tc-core = { path = "../../engine/crates/tc-core" }
+
+[dev-dependencies]
+tc-conformance = { path = "../../engine/crates/tc-conformance" }

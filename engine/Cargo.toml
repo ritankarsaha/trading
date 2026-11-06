@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/tc-core",
+  "crates/tc-ledger",
+  "crates/tc-sim",
+  "crates/tc-risk",
+  "crates/tc-strategy",
+  "crates/tc-backtest",
+  "crates/tc-cli",
+  "crates/tc-conformance",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "UNLICENSED"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tc-core = { path = "crates/tc-core" }
+tc-ledger = { path = "crates/tc-ledger" }
+tc-sim = { path = "crates/tc-sim" }
+tc-risk = { path = "crates/tc-risk" }
+tc-strategy = { path = "crates/tc-strategy" }
+tc-backtest = { path = "crates/tc-backtest" }
+tc-conformance = { path = "crates/tc-conformance" }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+overflow-checks = true   # money code: overflow must panic, never wrap

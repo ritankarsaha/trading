@@ -1,0 +1,10 @@
+[package]
+name = "tc-risk"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+tc-core.workspace = true
+tc-ledger.workspace = true

@@ -1,0 +1,18 @@
+[package]
+name = "tc-cli"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "tc"
+path = "src/main.rs"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+tc-core.workspace = true
+tc-ledger.workspace = true
+tc-sim.workspace = true
+tc-risk.workspace = true
+tc-strategy.workspace = true
+tc-backtest.workspace = true
